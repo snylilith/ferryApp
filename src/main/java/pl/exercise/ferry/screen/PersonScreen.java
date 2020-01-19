@@ -19,12 +19,13 @@ public class PersonScreen implements Screen {
         } else {
             System.out.println("5zł");
         }
-
+        in.reset();
         System.out.println("Czy chcesz kupić następny bilet?");
 
-        String firstResponse = in.nextLine();
 
-        if ("tak".equalsIgnoreCase(firstResponse)) {
+        String anyOtherResponse = in.nextLine();
+
+        if ("tak".equalsIgnoreCase(anyOtherResponse)) {
             TicketScreen ticketScreen = new TicketScreen();
             ticketScreen.interact();
 
