@@ -31,18 +31,30 @@ public class VehicleScreen implements Screen {
 
             case "autobus":
                 System.out.println("5zł za metr");
+
+                System.out.println("Podaj długość pojazdu:");
+                final Scanner in3 = new Scanner(System.in);
+                BigDecimal dlugoscautobusu = (in.nextBigDecimal());
+
+                BigDecimal cenaBiletuZaAutobus = dlugoscautobusu.multiply(BigDecimal.valueOf(5));
+                System.out.print("Cena biletu: " + cenaBiletuZaAutobus);
+                System.out.println();
+
                 break;
+
             default:
                 System.out.println("Dostępne typy: osobowy, motor, ciężarówka, autobus");
+
+
         }
         System.out.println("Czy chcesz kupić następny bilet?");
 
-        String firstResponse = in.nextLine();
+        String nextResponse = in.nextLine();
 
-        if ("tak".equalsIgnoreCase(firstResponse)) {
+        if ("tak".equalsIgnoreCase(nextResponse)) {
             TicketScreen ticketScreen = new TicketScreen();
             ticketScreen.interact();
-
         }
     }
 }
+

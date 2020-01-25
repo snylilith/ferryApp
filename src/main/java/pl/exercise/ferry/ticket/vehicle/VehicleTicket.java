@@ -1,6 +1,8 @@
-package pl.exercise.ferry.ticket;
+package pl.exercise.ferry.ticket.vehicle;
 
 import java.math.BigDecimal;
+
+import pl.exercise.ferry.ticket.Ticket;
 import pl.exercise.ferry.vehicle.VehicleType;
 
 public abstract class VehicleTicket implements Ticket {
