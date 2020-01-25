@@ -1,5 +1,7 @@
 package pl.exercise.ferry.screen;
 
+import pl.exercise.ferry.Singleton;
+
 import java.util.Scanner;
 import java.math.BigDecimal;
 
@@ -8,16 +10,17 @@ public class VehicleScreen implements Screen {
     public void interact() {
         System.out.println("Podaj typ pojazdu:");
         final Scanner in = new Scanner(System.in);
+        Singleton.getInstance();
 
         String typ = in.nextLine();
         switch (typ) {
-            case "osobowy":
+            case "Car":
                 System.out.println("20zł");
                 break;
-            case "motor":
+            case "Bike":
                 System.out.println("10zł");
                 break;
-            case "ciężarówka":
+            case "Truck":
                 System.out.println("10zł za tonę");
 
                 System.out.println("Podaj wagę pojazdu:");
@@ -43,7 +46,7 @@ public class VehicleScreen implements Screen {
                 break;
 
             default:
-                System.out.println("Dostępne typy: osobowy, motor, ciężarówka, autobus");
+                System.out.println("Dostępne typy: Car, Bike, Truck, Bus");
 
 
         }

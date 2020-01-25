@@ -1,5 +1,7 @@
 package pl.exercise.ferry.screen;
 
+import pl.exercise.ferry.Singleton;
+
 import java.util.Scanner;
 
 public class PersonScreen implements Screen {
@@ -7,6 +9,7 @@ public class PersonScreen implements Screen {
     public void interact() {
         System.out.println("Podaj wiek:");
         final Scanner in = new Scanner(System.in);
+        Singleton.getInstance();
 
         int age = in.nextInt();
 
