@@ -3,7 +3,7 @@ package pl.exercise.ferry.ticket.vehicle;
 import pl.exercise.ferry.vehicle.VehicleType;
 
 public class Car extends VehicleTicket {
-    Car(VehicleType vehicleType, String owner) {
+    public Car(VehicleType vehicleType, String owner) {
         super(vehicleType, owner);
     }
 }

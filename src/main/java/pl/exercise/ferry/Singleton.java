@@ -1,14 +1,7 @@
 package pl.exercise.ferry;
 
 import pl.exercise.ferry.ticket.Ticket;
-import pl.exercise.ferry.ticket.person.Adult;
-import pl.exercise.ferry.ticket.person.Child;
-import pl.exercise.ferry.ticket.person.Senior;
-import pl.exercise.ferry.ticket.person.Young;
-import pl.exercise.ferry.ticket.vehicle.Bike;
-import pl.exercise.ferry.ticket.vehicle.Bus;
-import pl.exercise.ferry.ticket.vehicle.Car;
-import pl.exercise.ferry.ticket.vehicle.Truck;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,19 +9,13 @@ import java.util.List;
 
 public class Singleton {
 
-    public void add(){
-        ticket.add("Child");
-        ticket.add("Young");
-        ticket.add("Adult");
-        ticket.add("Senior");
-        ticket.add("Bus");
-        ticket.add("Car");
-        ticket.add("Truck");
-        ticket.add("Bike");
+    public void add(Ticket ticket){
+        tickets.add(ticket);
+
 
     }
 
-    ArrayList<String> ticket = new ArrayList<String>();
+    ArrayList<Ticket> tickets = new ArrayList<Ticket>();
 
 
     private Singleton (){
